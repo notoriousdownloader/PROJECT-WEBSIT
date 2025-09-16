@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Web form</title>
+	</head>
+<body>
+	<h1>ACTIVITY DISPLAY TEXTBOX OUTPUTS</h1>
+	
+	<input type="text" id="myTextBox" placeholder="Type something here...">
+	<button onclick="displayResult()">Display</button>
+
+	<h2>Your Input:</h2>
+	<p id="result"></p>
+
+	<script>
+		function displayResult() {
+		const inputValue = document.getElementById('myTextBox').value;
+		document.getElementById('result').innerText = inputValue;
+		}
+	</script>
+
+
+</body>
+	<footer>
+	</footer>
+</html>

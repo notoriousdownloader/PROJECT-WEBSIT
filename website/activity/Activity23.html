@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web form</title>
+    <link rel="stylesheet" href="Data.css">
+</head>
+<body>
+    <h2><center>User Data Management</center></h2>
+    <div id="formContainer">
+    <label for="nameInput">
+	First Name:
+    </label>
+    <input type="text" id="FnameInput" placeholder="Enter First Name...">
+    <label for="nameInput">
+    	Last Name:
+    </label>
+    <input type="text" id="LnameInput" placeholder="Enter Last Name...">
+
+    <br>
+    <button onclick="addData()">Add</button>
+    </div>
+
+    <table id="outputTable">
+       	<tr>
+       		<th>FirstName</th>
+       		<th>LastName</th>
+		<th>Action</th
+       	</tr>
+       </table>
+
+       <script>
+       function addData() {
+       		let Fname = document.getElementById("FnameInput").value;
+       		let Lname = document.getElementById("LnameInput").value;
+
+       		let table = document.getElementById("outputTable");
+       		let newRow = table.insertRow(table.rows.length);
+
+       		newRow.insertCell(0).innerHTML = Fname;
+       		newRow.insertCell(1).innerHTML = Lname;
+		newRow.insertCell(2).innerHTML = '<button onclick="editData(this)">Edit</button>'+'<button onclick="deleteData(this)">Delete</button>';
+               }
+
+	function editData(button){
+		let row= button.parentNode.parentNode;
+		
+		let FnameCell = row.cells[0];
+		let LnameCell = row.cells[1];
+
+		let FnameInput = prompt("Enter the update name: ", FnameCell.innerHTML);
+		let LnameInput = prompt("Enter the update name: ", LnameCell.innerHTML);
+
+		FnameCell.innerHTML = FnameInput;
+		LnameCell.innerHTML = LnameInput;
+		}
+
+	function deleteData(button){
+		let row= button.parentNode.parentNode;
+		
+		row.parentNode.removeChild(row);		
+		
+
+		}
+
+
+
+
+
+
+       </script>
+       
+       	
+
+</body>
+<footer>
+</footer>
+</html>

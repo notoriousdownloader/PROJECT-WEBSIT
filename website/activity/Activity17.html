@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web form</title>
+</head>
+<body>
+    <h1>ACTIVITY DISPLAY TEXTBOX OUTPUTS</h1>
+
+    <form onsubmit="displayResult(); return false;">
+        <label>
+            <input type="password" id="MyUser" placeholder="Password" minlength="5" maxlength="10" required>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Your Input:</h2>
+    <p id="result"></p>
+
+    <script>
+        function displayResult() {
+            const inputValue = document.getElementById('MyUser').value;
+            document.getElementById('result').innerText = 'Password: ' + inputValue;
+        }
+    </script>
+
+</body>
+<footer>
+</footer>
+</html>

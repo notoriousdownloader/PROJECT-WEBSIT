@@ -1,0 +1,13 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent-color: #e60000;
+  --card-bg: #f9f9f9;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #ff4c4c;
+  --card-bg: #1e1e1e;
+}
